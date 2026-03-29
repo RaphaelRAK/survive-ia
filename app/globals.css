@@ -2839,3 +2839,171 @@ a {
   animation: softRise 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
   animation-delay: calc(var(--i, 0) * 35ms);
 }
+
+/* ── Footer author signature ─────────────────────────── */
+.footer-author {
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.footer-author a {
+  color: #aaa;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+
+.footer-author a:hover {
+  color: #fff;
+}
+
+/* ── LinkedIn share button ────────────────────────────── */
+.linkedin-share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.8rem 1.4rem;
+  border-radius: 100px;
+  background: #0077B5;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.linkedin-share-btn:hover {
+  background: #005f94;
+  transform: translateY(-1px);
+}
+
+/* ── /resultat page ───────────────────────────────────── */
+.resultat-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: var(--bg);
+}
+
+.res-card {
+  width: 100%;
+  max-width: 480px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.res-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.res-card-brand {
+  font-size: 0.7rem;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+}
+
+.res-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.res-card-metier {
+  font-family: var(--display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.res-card-zone {
+  font-size: 0.68rem;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid;
+  border-radius: 100px;
+  letter-spacing: 0.06em;
+}
+
+.res-card-score {
+  font-family: var(--display);
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.res-card-score-denom {
+  font-size: 1.8rem;
+  font-weight: 400;
+  opacity: 0.5;
+  margin-left: 0.1em;
+}
+
+.res-card-bar {
+  height: 4px;
+  background: var(--border);
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.res-card-bar-fill {
+  height: 100%;
+  border-radius: 100px;
+  transition: width 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.res-card-titre {
+  font-family: var(--display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+.res-card-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.res-card-by {
+  font-size: 0.75rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  margin-top: 0.4rem;
+}
+
+@media (max-width: 520px) {
+  .res-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .res-card-score {
+    font-size: 4rem;
+  }
+
+  .res-card-actions {
+    flex-direction: column;
+  }
+
+  .res-card-actions .linkedin-share-btn,
+  .res-card-actions .btn-out {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}

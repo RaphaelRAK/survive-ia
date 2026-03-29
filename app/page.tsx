@@ -60,7 +60,7 @@ function StatCounter({ value, suffix, label }: { value: number; suffix: string; 
           requestAnimationFrame(step)
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.1 }
     )
     observer.observe(el)
     return () => observer.disconnect()
@@ -394,6 +394,13 @@ export default function HomePage() {
           </div>
           <div className="footer-bottom">
             <p className="mono">Impact IA Quiz • Projet personnel • Gratuit et anonyme</p>
+            <p className="footer-author">
+              Créé par <strong>Raphaël Rakotonaivo</strong>
+              {' · '}
+              <a href="https://www.linkedin.com/in/aina-rapha%C3%ABl-rakotonaivo-80a821189/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              {' · '}
+              <a href="https://raphael-dev.vercel.app/" target="_blank" rel="noopener noreferrer">Portfolio</a>
+            </p>
           </div>
         </div>
       </footer>
