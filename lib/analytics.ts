@@ -13,3 +13,13 @@ export function trackEvent(eventName: string, params: Record<string, string | nu
 
   window.gtag('event', eventName, params)
 }
+
+/** Navigation App Router : envoie une page vue GA4 (recommandé par Google pour les SPA). */
+export function trackPageView(pagePath: string) {
+  if (!GA_MEASUREMENT_ID || typeof window === 'undefined' || typeof window.gtag !== 'function') return
+
+  window.gtag('config', GA_MEASUREMENT_ID, {
+    page_path: pagePath,
+    page_location: new URL(pagePath, window.location.origin).href,
+  })
+}
