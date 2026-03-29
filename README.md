@@ -16,6 +16,34 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Anonymous Analytics (Free)
+
+This project supports free anonymous analytics with Google Analytics 4.
+
+1. Create a GA4 property at [Google Analytics](https://analytics.google.com/).
+2. Create a Web data stream and copy your Measurement ID (`G-XXXXXXXXXX`).
+3. Create a local env file:
+
+```bash
+cp .env.example .env.local
+```
+
+4. Set:
+
+```bash
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+```
+
+Tracked anonymous events:
+- `page_view`
+- `quiz_started`
+- `quiz_answered`
+- `quiz_completed`
+- `quiz_abandoned`
+- `quiz_restart_after_result`
+
+No account/email/phone is collected by the app, only anonymous usage metrics.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
