@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import { Suspense } from 'react'
 import AnalyticsTracker from '@/components/analytics-tracker'
 import './globals.css'
 
@@ -50,7 +51,9 @@ export default function RootLayout({
         )}
       </head>
       <body>
-        <AnalyticsTracker />
+        <Suspense fallback={null}>
+          <AnalyticsTracker />
+        </Suspense>
         {children}
       </body>
     </html>
